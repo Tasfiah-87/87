@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tasfiah Aiman Khan - Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0b0b0b;
+      color:#f5f5f5;
+    }
+
+    /* NAVBAR */
+    nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(0,0,0,0.92);
+      border-bottom:1px solid rgba(255,26,26,0.45);
+      padding:12px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo{
+      color:#ff1a1a;
+      font-weight:700;
+      letter-spacing:0.5px;
+      font-size:18px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#eaeaea;
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:12px;
+      transition:0.2s;
+    }
+
+    nav a:hover{
+      color:#ff1a1a;
+      background:rgba(255,26,26,0.10);
+    }
+
+    /* HEADER (fix extra top space + make it pretty) */
+    header{
+      padding:30px 16px 20px;  /* কম ফাঁকা */
+      background:
+        radial-gradient(900px 300px at 50% 0%, rgba(255,26,26,0.18), transparent 60%),
+        linear-gradient(135deg,#000,#120000);
+      border-bottom:1px solid rgba(255,26,26,0.25);
+    }
+
+    /* HERO CARD inside header */
+    .hero{
+      max-width:900px;
+      margin:0 auto;
+      background:#111;
+      border:1px solid rgba(255,26,26,0.35);
+      border-radius:22px;
+      padding:22px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:18px;
+      box-shadow:0 18px 45px rgba(0,0,0,0.7);
+    }
+
+    .profile-img{
+      width:110px;     /* আগের থেকে ছোট -> clean */
+      height:110px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #ff1a1a;
+      box-shadow:0 10px 25px rgba(255,26,26,0.22);
+      transition:0.35s;
+      flex:0 0 auto;
+    }
+
+    .profile-img:hover{
+      transform:scale(1.06);
+    }
+
+    .hero-text{
+      text-align:left;
+    }
+
+    .hero-text h1{
+      font-size:26px;
+      line-height:1.2;
+    }
+
+    .hero-text p{
+      margin-top:6px;
+      color:#cfcfcf;
+      font-size:14px;
+    }
+
+    /* SECTION CARDS */
+    section{
+      max-width:900px;
+      margin:18px auto;
+      padding:22px 26px;
+      background:#101010;
+      border-radius:18px;
+      border:1px solid rgba(255,26,26,0.22);
+      box-shadow:0 10px 24px rgba(0,0,0,0.6);
+      transition:0.25s;
+    }
+
+    section:hover{
+      transform:translateY(-3px);
+      border-color:rgba(255,26,26,0.55);
+      box-shadow:0 14px 30px rgba(255,26,26,0.08), 0 12px 30px rgba(0,0,0,0.75);
+    }
+
+    h2{
+      margin-bottom:12px;
+      color:#ff1a1a;
+      padding-bottom:8px;
+      border-bottom:1px solid rgba(255,26,26,0.18);
+      font-size:18px;
+    }
+
+    ul{ padding-left:20px; }
+    li{
+      margin-bottom:8px;
+      color:#e8e8e8;
+      line-height:1.5;
+    }
+
+    /* FOOTER */
+    footer{
+      text-align:center;
+      padding:18px;
+      background:#000;
+      margin-top:26px;
+      border-top:1px solid rgba(255,26,26,0.55);
+    }
+
+    footer p{ color:#ffb3b3; }
+
+    /* RESPONSIVE */
+    @media (max-width: 650px){
+      .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:12px;
+        padding:18px 14px;
+      }
+      .hero-text{
+        text-align:center;
+      }
+      nav ul{
+        gap:6px;
+      }
+      nav a{
+        padding:7px 8px;
+        font-size:13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Tasfiah</div>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <img src="photo.jpeg" alt="Tasfiah Image" class="profile-img">
+      <div class="hero-text">
+        <h1>Tasfiah Aiman Khan</h1>
+        <p>University Student | Aspiring Developer</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="education">
+    <h2>🎓 Education</h2>
+    <ul>
+      <li>B.Sc in Computer Science - University of Asia Pacific (2023-Present)</li>
+      <li>High School - Viqarunnisa Noon School And College (2018-2022)</li>
+    </ul>
+  </section>
+
+  <section id="courses">
+    <h2>📚 Courses</h2>
+    <ul>
+      <li>Data Structures & Algorithms</li>
+      <li>Web Development (HTML, CSS, JavaScript)</li>
+      <li>Database Management</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>🛠 Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Python Programming</li>
+      <li>SQL & Database Management</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>💻 Mini Projects</h2>
+    <ul>
+      <li>Simple Calculator App (HTML, JS)</li>
+      <li>To-Do List Web App</li>
+      <li>Recipe Website</li>
+    </ul>
+  </section>
+
+  <section id="achievements">
+    <h2>🏆 Achievements</h2>
+    <ul>
+      <li>1st Place in University Coding Competition</li>
+      <li>Certificate in Web Development Bootcamp</li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <p>Contact: 23201087@uap-bd.edu</p>
+  </footer>
+
+</body>
+</html>
