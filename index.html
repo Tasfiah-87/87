@@ -58,16 +58,17 @@ nav a:hover{
   background:rgba(255,26,26,0.10);
 }
 
-/* FULL PAGE SECTION STYLE */
+/* FULL PAGE SECTION */
 section, header, footer{
-  height:100vh;   /* 🔥 Every section full screen */
+  height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:80px 20px 20px; /* top space for navbar */
+  padding:100px 20px 20px;
   text-align:center;
   border-bottom:1px solid rgba(255,26,26,0.2);
+  overflow:auto;
 }
 
 /* HERO */
@@ -94,23 +95,58 @@ header{
   margin-bottom:15px;
 }
 
+/* Headings */
 h1{
   font-size:28px;
 }
 
 h2{
   color:#ff1a1a;
-  margin-bottom:20px;
-  font-size:22px;
+  margin-bottom:30px;
+  font-size:24px;
 }
 
-ul{
-  list-style:none;
+/* EDUCATION CARDS */
+.edu-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+  max-width:1000px;
 }
 
-li{
-  margin:10px 0;
-  font-size:16px;
+.edu-card{
+  background:#111;
+  border:1px solid rgba(255,26,26,0.4);
+  border-radius:15px;
+  padding:20px;
+  width:280px;
+  transition:0.3s;
+}
+
+.edu-card:hover{
+  transform:translateY(-5px);
+  border-color:#ff1a1a;
+  box-shadow:0 10px 25px rgba(255,26,26,0.2);
+}
+
+.edu-year{
+  display:block;
+  font-size:14px;
+  color:#ff4d4d;
+  margin-bottom:10px;
+  font-weight:bold;
+}
+
+.edu-card h3{
+  margin-bottom:10px;
+  font-size:18px;
+}
+
+.edu-card p{
+  font-size:14px;
+  color:#ccc;
+  line-height:1.5;
 }
 
 /* Footer */
@@ -130,7 +166,6 @@ footer p{
 <nav>
   <div class="logo">Tasfiah</div>
   <ul>
-    <li><a href="#">Home</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#courses">Courses</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -148,47 +183,54 @@ footer p{
   </div>
 </header>
 
+<!-- ✅ UPDATED EDUCATION SECTION -->
 <section id="education">
-  <h2>🎓 Education</h2>
-  <ul>
-    <li>B.Sc in Computer Science - University of Asia Pacific (2023-Present)</li>
-    <li>High School - Viqarunnisa Noon School And College (2018-2022)</li>
-  </ul>
+  <h2>🎓Education</h2>
+
+  <div class="edu-container">
+
+    <div class="edu-card">
+      <span class="edu-year">2024–Present</span>
+      <h3>B.Sc. in Computer Science & Engineering</h3>
+      <p>
+        University of Asia Pacific. Currently learning core CSE subjects
+        and working on programming projects.
+      </p>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-year">2020–2021</span>
+      <h3>Higher Secondary Certificate (HSC)</h3>
+      <p>
+       Viqarunnisa Noon School And College
+      </p>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-year">2019–2020</span>
+      <h3>Secondary School Certificate (SSC)</h3>
+      <p>
+       Viqarunnisa Noon School And College
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <section id="courses">
   <h2>📚 Courses</h2>
-  <ul>
-    <li>Data Structures & Algorithms</li>
-    <li>Web Development (HTML, CSS, JavaScript)</li>
-    <li>Database Management</li>
-  </ul>
 </section>
 
 <section id="skills">
   <h2>🛠 Skills</h2>
-  <ul>
-    <li>HTML, CSS, JavaScript</li>
-    <li>Python Programming</li>
-    <li>SQL & Database Management</li>
-  </ul>
 </section>
 
 <section id="projects">
-  <h2>💻 Mini Projects</h2>
-  <ul>
-    <li>Simple Calculator App (HTML, JS)</li>
-    <li>To-Do List Web App</li>
-    <li>Recipe Website</li>
-  </ul>
+  <h2>💻 Projects</h2>
 </section>
 
 <section id="achievements">
   <h2>🏆 Achievements</h2>
-  <ul>
-    <li>1st Place in University Coding Competition</li>
-    <li>Certificate in Web Development Bootcamp</li>
-  </ul>
 </section>
 
 <footer id="contact">
@@ -198,4 +240,3 @@ footer p{
 
 </body>
 </html>
-
